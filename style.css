@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: rgb(0, 0, 0);
+  }
+
+.ticker {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 3rem;
+    width: 20rem;
+    padding: 0.4rem;
+    border: 2px solid antiquewhite;
+    border-radius: 15px;
+
+
+    margin: auto;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color:antiquewhite;
+    cursor: pointer;
+ }
+
+ h1 {
+    font-size: 25px;
+ }
