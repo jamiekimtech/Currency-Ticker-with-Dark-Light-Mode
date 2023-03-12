@@ -5,18 +5,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/a3f2d4c6ba.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Currency Ticker</title>
   </head>
   <body>
-    <body>
-        <div class="centered">
-        <form action="https://finance.yahoo.com/quote/KRW=X/">
-           <button type="submit" class="ticker"> <p>USD/KRW</p>
-      <h1 class="result">1313.60</h1>
-      <h1 class="arrow">🠹</h1></button>
-        </form></div>
-
-    <!-- 🠻 -->
+    <div class="centered">
+      <form action="https://finance.yahoo.com/quote/KRW=X/">
+        <button type="submit" class="ticker border">
+          <p>USD/KRW</p>
+          <h1 class="result">1313.60</h1>
+          <h1 class="arrow">🠹</h1>
+        </button>
+      </form>
+      <div class="themeBtn">
+        <i class="fa-solid fa-moon"></i> <i class="fa-solid fa-sun icon"></i>
+      </div>
+    </div>
     <script src="/JS/script.js"></script>
   </body>
 </html>

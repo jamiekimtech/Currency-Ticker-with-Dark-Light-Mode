@@ -48,3 +48,22 @@ requestF.onload = function () {
     arrow.innerHTML = '-';
   }
 };
+
+// Light/Dark Theme
+
+const themeBtn = document.querySelector('.themeBtn');
+
+themeBtn.addEventListener('click', toggleClass);
+
+function toggleClass() {
+  document.body.classList.toggle('light');
+  const form = document.querySelector('form');
+  const formChildren = form.querySelectorAll('form *');
+  formChildren.forEach((child) => {
+    child.classList.toggle('light');
+  });
+  const icon = document.querySelectorAll('i');
+  icon.forEach((i) => {
+    i.classList.toggle('icon');
+  });
+}
