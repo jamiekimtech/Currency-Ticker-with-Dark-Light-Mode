@@ -41,9 +41,9 @@ requestF.send();
 requestF.onload = function () {
   var response = requestF.response.rates.KRW.change;
   if (response < 0) {
-    arrow.innerHTML = '🠻';
+    arrow.innerHTML = `<i class="fa-solid fa-caret-down"></i>`;
   } else if (response > 0) {
-    arrow.innerHTML = '🠹';
+    arrow.innerHTML = `<i class="fa-solid fa-caret-up"></i>`;
   } else {
     arrow.innerHTML = '-';
   }
