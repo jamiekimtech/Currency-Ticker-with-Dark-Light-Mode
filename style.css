@@ -19,7 +19,6 @@ h1 {
   gap: 25px;
 }
 
-
 /* Ticker */
 
 .ticker {
@@ -35,17 +34,13 @@ h1 {
   align-items: center;
   color: antiquewhite;
   background-color: transparent;
-  cursor: pointer;
   transition: 1.2s;
 }
 
 .ticker:hover {
-  cursor: pointer;
   transition: 0.5s;
   opacity: 55%;
-  
 }
-
 
 /* Light/Dark Theme */
 
@@ -64,17 +59,17 @@ h1 {
 
 .fa-sun {
   display: none;
-  }
+}
 .light .fa-sun {
   display: block;
   color: black;
 }
 
-.light *{
+.light * {
   background-color: antiquewhite;
   color: rgb(79, 71, 71);
- }
+}
 
- .light .ticker {
+.light .ticker {
   border: 2px solid rgb(49, 49, 49);
- }
+}
