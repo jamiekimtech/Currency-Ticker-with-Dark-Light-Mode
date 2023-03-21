@@ -2,7 +2,6 @@ const arrow = document.querySelector('.arrow');
 
 let today = new Date();
 let yesterday = new Date(today);
-
 yesterday.setDate(yesterday.getDate() - 1);
 
 function dateString(elem) {
@@ -12,21 +11,22 @@ function dateString(elem) {
   return `${year}-${month}-${date}`;
 }
 
-export const getFluctuation = function () {
-  fetch(
-    `https://api.exchangerate.host/fluctuation?start_date=${dateString(
-      today
-    )}&end_date=${dateString(yesterday)}`
-  )
-    .then((response) => {
-      return response.json();
-    })
-    .then((responseData) => {
-      const fluc = responseData.rates.KRW.change;
+export const getFluctuation = async function () {
+  try {
+    const response = await fetch(
+      `https://api.exchangerate.host/fluctuation?start_date=${dateString(
+        today
+      )}&end_date=${dateString(yesterday)}`
+    );
+    const responseData = await response.json();
+    const fluc = responseData.rates.KRW.change;
+    arrow.innerHTML =
       fluc < 0
-        ? (arrow.innerHTML = `<i class="fa-solid fa-caret-down"></i>`)
+        ? '<i class="fa-solid fa-caret-down"></i>'
         : fluc > 0
-        ? (arrow.innerHTML = `<i class="fa-solid fa-caret-up"></i>`)
-        : (arrow.innerHTML = '-');
-    });
+        ? '<i class="fa-solid fa-caret-up"></i>'
+        : '-';
+  } catch (error) {
+    console.log(error);
+  }
 };
