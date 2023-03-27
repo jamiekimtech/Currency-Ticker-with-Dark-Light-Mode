@@ -21,11 +21,15 @@ export const getFluctuation = async function () {
     const responseData = await response.json();
     const fluc = responseData.rates.KRW.change;
     arrow.innerHTML =
+      //check if fluctuation of currency is greater than 0
       fluc < 0
-        ? '<i class="fa-solid fa-caret-down"></i>'
+        ? //if less than zero generate and arrow pointing down
+          '<i class="fa-solid fa-caret-down"></i>'
         : fluc > 0
-        ? '<i class="fa-solid fa-caret-up"></i>'
-        : '-';
+        ? //if greater than zero generate an arrow pointing up
+          '<i class="fa-solid fa-caret-up"></i>'
+        : //if zero generate a dash
+          '-';
   } catch (error) {
     console.log(error);
   }

@@ -1,5 +1,3 @@
-// Light/Dark Theme
-
 export const themeBtn = document.querySelector('.themeBtn');
 
 export function toggleClass() {
