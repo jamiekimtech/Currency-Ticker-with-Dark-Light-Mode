@@ -8,7 +8,16 @@ A web application that displays daily currency rates between the Korean won (KRW
 
 <h2>Languages and Utilities Used</h2>
 
-- <b>JavaScript</b>
+- <b>JavaScript ES6 Modules</b><br />
+The website consists of three JavaScript modules:
+
+  1.  getCurrency<br />
+This module fetches the current exchange rate of USD to KRW from an API and displays it on the page. It uses the fetch API to make a GET request to the API endpoint, and then updates the DOM with the response data. 
+
+  2.  getFluctuation<br />
+This module fetches the fluctuation of the exchange rate of USD to KRW over the past day from an API and displays an arrow icon that indicates the direction of the change (up, down, or no change). It uses the fetch API to make a GET request to the API endpoint, and then updates the DOM with the response data. 
+  3.  toggleClass<br />
+This module toggles a class on a DOM element when the theme toggle button is clicked, to switch between light and dark mode. It uses the classList property of the DOM element to add or remove the class, depending on its current state.
 - <b>HTML</b>
 - <b>CSS</b>
 
