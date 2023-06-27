@@ -6,6 +6,8 @@ export const getCurrency = async function () {
       'https://api.exchangerate.host/latest?base=USD'
     );
     const responseData = await response.json();
+
+    // Update 'result' with the formatted Korean Won (KRW) exchange rate
     result.innerHTML = responseData.rates.KRW.toFixed(2);
   } catch (error) {
     console.log(error);
